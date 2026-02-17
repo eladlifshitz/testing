@@ -4,7 +4,7 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html dir="rtl" lang="he">
 	<head>
 		<title>Story by HTML5 UP</title>
 		<meta charset="utf-8" />
@@ -352,5 +352,24 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
+		
+    <script>
+        // מאגר הבדיחות - כאן תוכל להוסיף עוד בקלות
+        const jokes = [
+            { text: "למה פיל לובש נעליים אדומות? כדי שיוכל להתחבא במטע עגבניות.", tags: ["חיות", "נוסטלגיה"] },
+            { text: "מה ההבדל בין פסנתר לפיל? פסנתר אפשר להפיל, אבל פיל אי אפשר לפסנתר.", tags: ["חיות", "מוזיקה"] },
+            { text: "איך יודעים שפיל היה במקרר? לפי העקבות בחמאה.", tags: ["חיות", "אוכל"] }
+        ];
+
+        function getRandomJoke() {
+            const randomIndex = Math.floor(Math.random() * jokes.length);
+            const joke = jokes[randomIndex];
+            
+            document.getElementById('joke-display').innerText = joke.text;
+            document.getElementById('joke-tags').innerText = "תגיות: " + joke.tags.join(', ');
+        }
+    </script>
+
 	</body>
+
 </html>
